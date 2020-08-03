@@ -23,3 +23,14 @@ moment().subtract(7, 'years');  // subtracts 7 years to current date
 const today = moment();
 const nextWeek = today.add(7, 'days');
 console.log(nextWeek.format('dddd Do MMMM, YYYY'));
+
+moment('2020.01.01', 'YYYY.MM.DD').fromNow();
+// 9 days ago
+
+moment('2020.01.01', 'YYYY.MM.DD').fromNow(true);
+// 9 days
+
+const dateA = moment('01-01-1900', 'DD-MM-YYYY');
+const dateB = moment('01-01-2000', 'DD-MM-YYYY');
+
+console.log(dateA.from(dateB));
